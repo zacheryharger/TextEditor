@@ -15,6 +15,7 @@ public class BasicDocument extends Document
 	public BasicDocument(String text)
 	{
 		super(text);
+		
 	}
 	
 	
@@ -34,9 +35,13 @@ public class BasicDocument extends Document
 	@Override
 	public int getNumWords()
 	{
-		//TODO: Implement this method in week 2 according to the comments above.  
-		// See the Module 2 support videos if you need help.
-	    return 0;
+		//TODO: Make this code include ""
+		String[] wordArray = this.text.split("[^A-za-z]+");
+		for (int i = 0 ; i<wordArray.length ; i++) {
+			System.out.print(wordArray[i] + "* ");
+			}
+		int numWord = wordArray.length;
+	    return numWord;
 	}
 	
 	/**
@@ -54,9 +59,14 @@ public class BasicDocument extends Document
 	@Override
 	public int getNumSentences()
 	{
-	    //TODO: Implement this method.  See the Module 2 support videos 
-        // if you need help.
-        return 0;
+		//TODO: Make this code include ""
+		String[] sent = this.text.split("[^a-zA-z0-9,():;' ]+");
+		/*
+		 * 	for (int i = 0 ; i<sent.length ; i++) {
+		 *	System.out.print(sent[i] + "||");
+		}*/
+		int numSent = sent.length;
+        return numSent;
 	}
 	
 	/**
@@ -81,6 +91,7 @@ public class BasicDocument extends Document
 		// expression for the syllable counting.  We recommend you implement 
 		// the helper function countSyllables in Document.java using a loop, 
 		// and then call it here on each word.
+		countSyllables("texting");
         return 0;
 	}
 	

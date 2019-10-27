@@ -11,7 +11,7 @@ import java.util.regex.Pattern;
 
 public abstract class Document {
 
-	private String text;
+	protected String text;
 	
 	/** Create a new document from the given text.
 	 * Because this class is abstract, this is used only from subclasses.
@@ -67,6 +67,9 @@ public abstract class Document {
 		// TODO: Implement this method so that you can call it from the 
 	    // getNumSyllables method in BasicDocument (module 2) and 
 	    // EfficientDocument (module 3).
+		for (int i = 0;i<word.length();i++) {
+			System.out.println(word.charAt(i));
+		}
 	    return 0;
 	}
 	
